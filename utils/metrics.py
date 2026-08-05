@@ -1,0 +1,70 @@
+import numpy as np
+
+
+def RSE(pred, true):
+    return np.sqrt(np.sum((true - pred) ** 2)) / np.sqrt(np.sum((true - true.mean()) ** 2))
+
+
+def CORR(pred, true):
+    u = ((true - true.mean(0)) * (pred - pred.mean(0))).sum(0)
+    d = np.sqrt(((true - true.mean(0)) ** 2 * (pred - pred.mean(0)) ** 2).sum(0))
+    d += 1e-12
+    return 0.01 * (u / d).mean(-1)
+
+
+def MAE(pred, true):
+    return np.mean(np.abs(pred - true))
+
+
+def MSE(pred, true):
+    return np.mean((pred - true) ** 2)
+
+
+def RMSE(pred, true):
+    return np.sqrt(MSE(pred, true))
+
+
+def MAPE(pred, true):
+    return np.mean(np.abs((pred - true) / (true + 1e-12)))
+
+
+def MSPE(pred, true):
+    return np.mean(np.square((pred - true) / (true + 1e-12)))
+
+
+# ==========================
+# ADDED: R2 + Adjusted R2
+# ==========================
+def R2(pred, true):
+    """
+    Coefficient of determination (global)
+    """
+    ss_res = np.sum((true - pred) ** 2)
+    ss_tot = np.sum((true - true.mean()) ** 2)
+    return 1.0 - ss_res / (ss_tot + 1e-12)
+
+
+def Adjusted_R2(pred, true, n_features=1):
+    """
+    Adjusted R2 (global)
+    n_features: number of predictors/features (e.g., channels)
+    """
+    # total scalar samples
+    n = int(np.prod(true.shape))
+    r2 = R2(pred, true)
+    return 1.0 - (1.0 - r2) * (n - 1) / (n - n_features - 1 + 1e-12)
+
+
+def metric(pred, true, n_features=1):
+    mae = MAE(pred, true)
+    mse = MSE(pred, true)
+    rmse = RMSE(pred, true)
+    mape = MAPE(pred, true)
+    mspe = MSPE(pred, true)
+    rse = RSE(pred, true)
+    corr = CORR(pred, true)
+
+    r2 = R2(pred, true)
+    adj_r2 = Adjusted_R2(pred, true, n_features=n_features)
+
+    return mae, mse, rmse, mape, mspe, rse, corr, r2, adj_r2
