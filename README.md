@@ -124,12 +124,24 @@ The `data_factory.py` file serves as the interface between experiments and datas
 
 ## exp/
 
-Contains experiment pipelines:
-- Training
-- Validation
-- Testing
-- Checkpoint management
-- Metrics calculation
+Contains the experiment and training framework used for all forecasting models.
+
+The module is responsible for:
+
+- Creating and managing forecasting experiments
+- Initializing and configuring models
+- Handling training, validation, and testing workflows
+- Managing GPU and CPU execution
+- Computing forecasting metrics and evaluation results
+- Saving checkpoints and trained models
+- Generating prediction outputs and benchmark results
+- Tracking computational efficiency metrics such as:
+  - Training time
+  - GPU memory consumption
+  - CPU memory usage
+  - Inference latency
+
+The `exp_basic.py` file provides the base experiment infrastructure and model management utilities, while `exp_forecasting.py` implements the complete forecasting workflow, including model training, validation, testing, performance evaluation, and efficiency analysis. 【1-c8d557】【2-ee8652】
 
 ## models/
 
