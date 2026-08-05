@@ -5,7 +5,8 @@ This repository accompanies the paper:
 > **Deep Learning for Residential Load Forecasting: A Comprehensive Review and Benchmark Study**  
 > Reza Nematirad, Anil Pahwa, and Balasubramaniam Natarajan
 
----
+---![Uploading time_series_forecasting_models last-1.png…]()
+
 
 <details>
 <summary><strong>Overview</strong></summary>
