@@ -1,10 +1,5 @@
 # Deep Learning for Residential Load Forecasting: A Comprehensive Review and Benchmark Study
 
-[![Paper](https://img.shields.io/badge/P20Access-blue]()
-[![Python](https://img.shdge/Python-3.9-green]()
-[![ps://img.shields.io/badge/PyTorch-2.3-red]()
-[![ps://img.shields.io/badge/License-MIT-yellow]()
-
 This repository accompanies the paper:
 
 > **Deep Learning for Residential Load Forecasting: A Comprehensive Review and Benchmark Study**  
