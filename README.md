@@ -5,7 +5,12 @@ This repository accompanies the paper:
 > **Deep Learning for Residential Load Forecasting: A Comprehensive Review and Benchmark Study**  
 > Reza Nematirad, Anil Pahwa, and Balasubramaniam Natarajan
 
-## Overview
+---
+
+<details>
+<summary><strong>Overview</strong></summary>
+
+<br>
 
 This repository provides a unified benchmarking framework for deep learning-based residential load forecasting, including:
 
@@ -19,66 +24,79 @@ This repository provides a unified benchmarking framework for deep learning-base
   - GPU memory usage
   - Inference latency
 
----
-
-## Benchmark Models
+### Benchmark Models
 
 The evaluated models are grouped into six architectural families.
 
-### Recurrent Neural Networks (RNNs)
+#### Recurrent Neural Networks (RNNs)
 
 - RNN
 - LSTM
 - GRU
 - BiLSTM
 - ResLSTM
-### CNN / TCN Models
+
+#### CNN / TCN Models
 
 - TimesNet
 - ModernTCN
 - Times2D
 - ConvLSTM
-### Transformer Models
+
+#### Transformer Models
+
 - iTransformer
 - PatchTST
 - Informer
 - Crossformer
-### MLP / Linear Models
+
+#### MLP / Linear Models
+
 - DLinear
 - SparseTSF
 - FITS
 - TimeMixer
 - HDMixer
-### State Space Models (SSMs)
+
+#### State Space Models (SSMs)
+
 - TimePro
 - S-Mamba
-### Large Language Models (LLMs)
+
+#### Large Language Models (LLMs)
+
 - TimeLLM-GPT2
 - TimeLLM-LLaMA7B
 - TEMPO
 
+</details>
+
 ---
 
-# How to Use This Repository
+<details>
+<summary><strong>How to Use This Repository</strong></summary>
 
-## 1. Clone the Repository
+<br>
+
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/Tims2D/Residential-Load-Forecasting-Benchmark.git
 cd Residential-Load-Forecasting-Benchmark
 ```
 
-## 2. Install Dependencies
+### 2. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## 3. Prepare Your Dataset
+### 3. Prepare Your Dataset
 
-Place your dataset inside the dataset/ directory.
+Place your dataset inside the `dataset/` directory.
 
-Dataset Requirements:
+#### Dataset Requirements
+
 - Dataset should be in CSV format.
 - The target variable must be the last column.
 - All preceding columns are treated as input features.
@@ -86,11 +104,15 @@ Dataset Requirements:
 
 Example:
 
+```csv
 timestamp,temp,humidity,wind_speed,load
+2024-01-01 00:00,22.1,45,5.2,1.83
+2024-01-01 00:15,21.8,47,4.8,1.79
+```
 
-Here, 'load' is the forecasting target.
+Here, `load` is the forecasting target.
 
-## 4. Run a Model
+### 4. Run a Model
 
 Example:
 
@@ -100,56 +122,55 @@ sh ./scripts/lstm/lstm_15Minute_data.sh
 
 You can run other models using their corresponding scripts.
 
-# Repository Structure
+</details>
 
-## dataset/
+---
+
+<details>
+<summary><strong>Repository Structure</strong></summary>
+
+<br>
+
+### dataset/
 
 Contains all datasets used for benchmarking and user-provided datasets.
 
-## data_provider/
+### data_provider/
 
 Contains the data handling and preprocessing pipeline used throughout the repository.
 
-The module is responsible for:
+Responsibilities include:
 
 - Loading datasets from CSV files
 - Preparing training, validation, and test sets
 - Applying data normalization and scaling
-- Generating input-output forecasting windows
-- Creating PyTorch dataloaders for deep learning models
-- Supporting both deep learning and traditional machine learning forecasting workflows
-- Processing temporal features and metadata required by forecasting models
+- Generating forecasting windows
+- Creating PyTorch dataloaders
+- Supporting both deep learning and machine learning workflows
+- Processing temporal features and metadata
 
-The `data_factory.py` file serves as the interface between experiments and datasets, while `data_loader.py` implements dataset preprocessing, window generation, scaling, and batching utilities. 【1-d0b6cb】【2-44318f】
-
-## exp/
+### exp/
 
 Contains the experiment and training framework used for all forecasting models.
 
-The module is responsible for:
+Responsibilities include:
 
 - Creating and managing forecasting experiments
-- Initializing and configuring models
-- Handling training, validation, and testing workflows
-- Managing GPU and CPU execution
-- Computing forecasting metrics and evaluation results
-- Saving checkpoints and trained models
-- Generating prediction outputs and benchmark results
-- Tracking computational efficiency metrics such as:
-  - Training time
-  - GPU memory consumption
-  - CPU memory usage
-  - Inference latency
+- Initializing models
+- Training, validation, and testing
+- Saving checkpoints
+- Computing evaluation metrics
+- Generating predictions
+- Measuring computational efficiency
 
-The `exp_basic.py` file provides the base experiment infrastructure and model management utilities, while `exp_forecasting.py` implements the complete forecasting workflow, including model training, validation, testing, performance evaluation, and efficiency analysis. 【1-c8d557】【2-ee8652】
+### models/
 
-## models/
+Contains implementations of all forecasting models used in the benchmark.
 
-Contains implementations of all forecasting models.
+### layers/
 
-## layers/
+Contains reusable neural network building blocks:
 
-Contains reusable neural network components:
 - Attention layers
 - Embedding layers
 - Convolution blocks
@@ -157,18 +178,19 @@ Contains reusable neural network components:
 - Transformer layers
 - State-space components
 
-## utils/
+### utils/
 
 Contains utility functions:
+
 - Evaluation metrics
-- Visualization utilities
-- Logging
+- Visualization tools
+- Logging utilities
 - Early stopping
 - Learning-rate scheduling
 
-## scripts/
+### scripts/
 
-Contains ready-to-run shell scripts for all benchmark experiments.
+Contains ready-to-run shell scripts for benchmark experiments.
 
 Example:
 
@@ -176,20 +198,52 @@ Example:
 sh ./scripts/timemixer/timemixer_15Minute_data.sh
 ```
 
-## Results
+### results/
 
-Benchmark outputs, figures, and logs can be stored under:
+Stores benchmark outputs, figures, and generated results.
 
+```text
 results/
 ├── accuracy/
 ├── efficiency/
 └── figures/
+```
 
-## Adding a New Model
+### Adding a New Model
 
-1. Add the model implementation to models/.
-2. Add custom layers to layers/ if needed.
-3. Register the model in the experiment pipeline.
-4. Create a new script under scripts/.
+1. Add the model implementation to `models/`.
+2. Add custom layers to `layers/` if required.
+3. Register the model in the experiment framework.
+4. Create a script under `scripts/`.
 5. Run the script for training and evaluation.
 
+</details>
+
+---
+
+<details>
+<summary><strong>Contribution</strong></summary>
+
+<br>
+
+Contributions are welcome.
+
+To contribute:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Commit your changes with clear descriptions.
+4. Submit a pull request.
+
+Possible contributions include:
+
+- Implementing new forecasting models
+- Improving computational efficiency
+- Adding new benchmark datasets
+- Enhancing documentation
+- Reporting bugs and issues
+- Improving reproducibility
+
+Please ensure that all submitted code follows the existing repository structure and coding style.
+
+</details>
