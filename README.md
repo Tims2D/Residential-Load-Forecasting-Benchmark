@@ -108,12 +108,19 @@ Contains all datasets used for benchmarking and user-provided datasets.
 
 ## data_provider/
 
-Contains data loading and preprocessing utilities:
-- Dataset loading
-- Train/validation/test splitting
-- Sliding window generation
-- Data normalization
-- Batch preparation
+Contains the data handling and preprocessing pipeline used throughout the repository.
+
+The module is responsible for:
+
+- Loading datasets from CSV files
+- Preparing training, validation, and test sets
+- Applying data normalization and scaling
+- Generating input-output forecasting windows
+- Creating PyTorch dataloaders for deep learning models
+- Supporting both deep learning and traditional machine learning forecasting workflows
+- Processing temporal features and metadata required by forecasting models
+
+The `data_factory.py` file serves as the interface between experiments and datasets, while `data_loader.py` implements dataset preprocessing, window generation, scaling, and batching utilities. 【1-d0b6cb】【2-44318f】
 
 ## exp/
 
