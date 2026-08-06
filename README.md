@@ -235,15 +235,37 @@ To contribute:
 3. Commit your changes with clear descriptions.
 4. Submit a pull request.
 
-Possible contributions include:
+## Contributions
+
+We welcome contributions that improve this repository, including:
 
 - Implementing new forecasting models
 - Improving computational efficiency
 - Adding new benchmark datasets
 - Enhancing documentation
 - Reporting bugs and issues
-- Improving reproducibility
+- Improving reproducibility and experimental consistency
 
-Please ensure that all submitted code follows the existing repository structure and coding style.
+Please ensure that all contributions follow the existing repository structure, coding style, and documentation guidelines.
 
-</details>
+## Contact
+
+For questions, suggestions, or collaboration opportunities, please contact:
+
+[Reza Nemati Rad](mailto:rezanematirad@gmail.com)
+
+## Acknowledgments
+
+We sincerely appreciate the following open-source projects for providing valuable codebases, implementations, and datasets that have contributed to this work:
+
+- [DLinear](https://github.com/vivva/DLinear)
+- [Informer](https://github.com/zhouhaoyi/Informer2020)
+- [ModernTCN](https://github.com/luodhhh/ModernTCN)
+- [PatchTST](https://github.com/yuqinie98/PatchTST)
+- [FITS](https://github.com/VEWOXIC/FITS)
+- [SparseTSF](https://github.com/lss-1138/SparseTSF)
+- [TimeMixer](https://github.com/kwuking/TimeMixer)
+- [Time-Series-Library](https://github.com/thuml/Time-Series-Library)
+- [iTransformer](https://github.com/thuml/iTransformer)
+
+We thank the authors and contributors of these repositories for making their implementations publicly available and supporting reproducible research in time-series forecasting.
