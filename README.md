@@ -226,15 +226,6 @@ results/
 
 <br>
 
-Contributions are welcome.
-
-To contribute:
-
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Commit your changes with clear descriptions.
-4. Submit a pull request.
-
 ## Contributions
 
 We welcome contributions that improve this repository, including:
