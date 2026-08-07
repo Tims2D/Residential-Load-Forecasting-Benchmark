@@ -221,9 +221,8 @@ Please ensure that all contributions follow the existing repository structure, c
 <summary><strong>Contact</strong></summary>
 
 For questions, suggestions, or collaboration opportunities, please contact:
+loaddemandforecasting@gmail.com
 
-**Reza Nematirad**  
-📧 rezanematirad@gmail.com
 
 </details>
 
