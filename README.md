@@ -3,7 +3,8 @@
 > **Deep Learning for Residential Load Forecasting: A Comprehensive Review and Benchmark Study**  
 > Reza Nematirad, Anil Pahwa, and Balasubramaniam Natarajan
 
----
+<details>
+<summary><strong>Overview</strong></summary>
 
 This repository provides a unified benchmarking framework for residential load forecasting using state-of-the-art deep learning models, including:
 
@@ -27,6 +28,8 @@ Since LLM-based approaches require additional dependencies and computational res
   - TimeLLM-GPT2 (GPT-2-based LLM)
   - TimeLLM-LLaMA7B (LLaMA-7B-based LLM)
   - TEMPO (GPT-2-based LLM with LoRA fine-tuning)
+
+</details>
 
 <details>
 <summary><strong>How to Use This Repository</strong></summary>
