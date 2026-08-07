@@ -4,7 +4,7 @@
 > Reza Nematirad, Anil Pahwa, and Balasubramaniam Natarajan
 
 <p align="center">
-  <img src="figures/timerecasting_models_last-1.png
+  <img src="figures/time_series_forecasting_t-1.png
 </p>
 
 <details>
