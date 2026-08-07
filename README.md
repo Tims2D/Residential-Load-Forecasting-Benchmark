@@ -4,9 +4,9 @@
 > Reza Nematirad, Anil Pahwa, and Balasubramaniam Natarajan
 
 <p align="center">
-<img src="figures/time_series_forecasting_models last-1.png
-" width="
-  
+  <img src="figures/timerecasting_models_last-1.png
+</p>
+
 <details>
 <summary><strong>Overview</strong></summary>
 
