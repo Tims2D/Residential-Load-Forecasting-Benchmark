@@ -1,0 +1,49 @@
+datasets:
+
+  household_data_1min:
+    root_path: ./dataset/
+    data_path: household_data_1min.csv
+    data_name: household_data_1min
+    data: household_data_1min
+    lradj: type4
+    features: S
+    target: Load
+    embed: timeF
+    freq: m
+    percent: 100
+
+  10seconds_load:
+    root_path: ./dataset/
+    data_path: 10seconds_load.csv
+    data_name: 10seconds_load
+    data: 10seconds_load
+    lradj: type4
+    features: S
+    target: Load
+    embed: timeF
+    freq: s
+    percent: 100
+
+  15Minute_load:
+    root_path: ./dataset/
+    data_path: 15Minute_load.csv
+    data_name: 15Minute_load
+    data: 15Minute_load
+    lradj: type4
+    features: M
+    target: Load
+    embed: timeF
+    freq: 15min
+    percent: 100
+
+  hourly_load:
+    root_path: ./dataset/
+    data_path: hourly_load.csv
+    data_name: hourly_load
+    data: hourly_load
+    lradj: type4
+    features: M
+    target: Load
+    embed: timeF
+    freq: h
+    percent: 100

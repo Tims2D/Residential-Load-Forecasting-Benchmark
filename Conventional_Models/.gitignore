@@ -1,0 +1,43 @@
+# ==========================
+# Results and generated files
+# ==========================
+
+ExtractedResults/
+logs/
+results/
+results 15 minute/
+results hourly/
+results_10second/
+test_results/
+
+# ==========================
+# Temporary/output files
+# ==========================
+
+*.png
+*.tar.gz
+*.log
+
+# Specific excluded scripts/files
+ChackNSNs.py
+ML_Arguments.py
+RandomForest.py
+reza.py
+result.txt
+
+run_all_10seconds_load.sh
+run_all_15Minute_data.sh
+run_all_hourly_data.sh
+run_all_Load2.sh
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Model/checkpoint files
+*.pth
+*.pt
+*.h5

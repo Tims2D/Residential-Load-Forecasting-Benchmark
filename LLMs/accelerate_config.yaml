@@ -1,0 +1,9 @@
+compute_environment: LOCAL_MACHINE
+distributed_type: MULTI_GPU
+num_machines: 1
+num_processes: 2
+mixed_precision: 'no'
+main_process_port: 29503
+downcast_bf16: 'no'
+machine_rank: 0
+same_network: true
