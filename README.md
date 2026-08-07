@@ -21,7 +21,8 @@ This repository provides a unified benchmarking framework for residential load f
 
 Since LLM-based approaches require additional dependencies and computational resources, they are separated from conventional models so users can install only the packages required for their experiments.
 
-### Conventional Models (`Conventional_Models/`)
+<details>
+<summary><strong>Conventional Models (<code>Conventional_Models/</code>)</strong></summary>
 
 - Recurrent Neural Networks (RNNs)
 - CNN / TCN Models
@@ -29,7 +30,10 @@ Since LLM-based approaches require additional dependencies and computational res
 - MLP / Linear Models
 - State Space Models (SSMs)
 
-### Large Language Models (`LLMs/`)
+</details>
+
+<details>
+<summary><strong>Large Language Models (<code>LLMs/</code>)</strong></summary>
 
 - TimeLLM-GPT2 (GPT-2-based LLM)
 - TimeLLM-LLaMA7B (LLaMA-7B-based LLM)
@@ -37,9 +41,7 @@ Since LLM-based approaches require additional dependencies and computational res
 
 </details>
 
----
-
-<details>
+</details>
 <summary><strong>How to Use This Repository</strong></summary>
 
 ### Prerequisites
