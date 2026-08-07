@@ -4,8 +4,11 @@
 > Reza Nematirad, Anil Pahwa, and Balasubramaniam Natarajan
 
 <p align="center">
-  <img src="figures/time_series_forecasting_models_last.svg" width="600">
+  <imgres/time_series_forecasting_models_last.svg
 </p>
+
+<details>
+<summary><strong>Overview</strong></summary>
 
 This repository provides a unified benchmarking framework for residential load forecasting using state-of-the-art deep learning models, including:
 
@@ -18,17 +21,19 @@ This repository provides a unified benchmarking framework for residential load f
 
 Since LLM-based approaches require additional dependencies and computational resources, they are separated from conventional models so users can install only the packages required for their experiments.
 
-- **Conventional Models (`Conventional_Models/`)**
-  - Recurrent Neural Networks (RNNs)
-  - CNN / TCN Models
-  - Transformer Models
-  - MLP / Linear Models
-  - State Space Models (SSMs)
+### Conventional Models (`Conventional_Models/`)
 
-- **Large Language Models (`LLMs/`)**
-  - TimeLLM-GPT2 (GPT-2-based LLM)
-  - TimeLLM-LLaMA7B (LLaMA-7B-based LLM)
-  - TEMPO (GPT-2-based LLM with LoRA fine-tuning)
+- Recurrent Neural Networks (RNNs)
+- CNN / TCN Models
+- Transformer Models
+- MLP / Linear Models
+- State Space Models (SSMs)
+
+### Large Language Models (`LLMs/`)
+
+- TimeLLM-GPT2 (GPT-2-based LLM)
+- TimeLLM-LLaMA7B (LLaMA-7B-based LLM)
+- TEMPO (GPT-2-based LLM with LoRA fine-tuning)
 
 </details>
 
@@ -43,14 +48,14 @@ All experiments were developed and tested using **Python 3.10**.
 
 ### 1. Clone the Repository
 
-For conventional models (non-LLMs):
+#### Conventional Models (Non-LLMs)
 
 ```bash
 git clone https://github.com/Tims2D/Residential-Load-Forecasting-Benchmark.git
 cd Residential-Load-Forecasting-Benchmark/Conventional_Models
 ```
 
-For LLM-based models:
+#### LLM-Based Models
 
 ```bash
 git clone https://github.com/Tims2D/Residential-Load-Forecasting-Benchmark.git
@@ -59,13 +64,13 @@ cd Residential-Load-Forecasting-Benchmark/LLMs
 
 ### 2. Install Dependencies
 
-For conventional models (non-LLMs):
+#### Conventional Models (Non-LLMs)
 
 ```bash
 pip install -r requirements.txt
 ```
 
-For LLM-based models:
+#### LLM-Based Models
 
 ```bash
 pip install -r requirements_llm.txt
@@ -118,64 +123,59 @@ LLMs/
 └── utils/
 ```
 
-### dataset/
+### `dataset/`
 
-Contains all datasets used for benchmarking and user-provided datasets.
+Contains benchmark datasets and user-provided datasets.
 
-### data_provider/
+### `data_provider/`
 
-Contains the data handling and preprocessing pipeline used throughout the repository.
+Handles data loading and preprocessing:
 
-Responsibilities include:
+- Dataset loading
+- Train/validation/test splitting
+- Data normalization and scaling
+- Forecast window generation
+- PyTorch dataloader creation
+- Temporal feature processing
 
-- Loading datasets from CSV files
-- Preparing training, validation, and test sets
-- Applying data normalization and scaling
-- Generating forecasting windows
-- Creating PyTorch dataloaders
-- Supporting both deep learning and machine learning workflows
-- Processing temporal features and metadata
+### `exp/`
 
-### exp/
+Contains experiment pipelines:
 
-Contains the experiment and training framework used for all forecasting models.
+- Model initialization
+- Training
+- Validation
+- Testing
+- Checkpoint management
+- Evaluation metrics
+- Computational efficiency measurements
 
-Responsibilities include:
-
-- Creating and managing forecasting experiments
-- Initializing models
-- Training, validation, and testing
-- Saving checkpoints
-- Computing evaluation metrics
-- Generating predictions
-- Measuring computational efficiency
-
-### models/
+### `models/`
 
 Contains implementations of all forecasting models used in the benchmark.
 
-### layers/
+### `layers/`
 
-Contains reusable neural network building blocks:
+Contains reusable neural network components:
 
 - Attention layers
 - Embedding layers
-- Convolution blocks
+- Convolutional blocks
 - Decomposition modules
 - Transformer layers
 - State-space components
 
-### utils/
+### `utils/`
 
 Contains utility functions:
 
 - Evaluation metrics
-- Visualization tools
-- Logging utilities
+- Visualization utilities
+- Logging
 - Early stopping
 - Learning-rate scheduling
 
-### scripts/
+### `scripts/`
 
 Contains ready-to-run shell scripts for benchmark experiments.
 
@@ -185,11 +185,11 @@ Example:
 sh ./scripts/timemixer/timemixer_15Minute_data.sh
 ```
 
-### results/
+### `results/`
 
 - `logs/` : Training and evaluation log files.
-- `results/` : Saved forecasting outputs, including ground-truth and predicted values.
-- `test_results/` : Visualization results generated during testing, such as forecast plots and comparison figures.
+- `results/` : Forecast outputs, including ground-truth and predicted values.
+- `test_results/` : Visualization files generated during testing.
 
 </details>
 
