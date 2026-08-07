@@ -4,7 +4,7 @@
 > Reza Nematirad, Anil Pahwa, and Balasubramaniam Natarajan
 
 <p align="center">
-  <img src="figures/time_series_forecasting_t-1.png" width=summary><strong>Overview</strong></summary>
+  <img src="figures/time_series_forecasting_models last.svg" width=summary><strong>Overview</strong></summary>
 
 This repository provides a unified benchmarking framework for residential load forecasting using state-of-the-art deep learning models, including:
 
