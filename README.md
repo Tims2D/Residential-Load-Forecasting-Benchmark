@@ -1,77 +1,32 @@
 # Deep Learning for Residential Load Forecasting: A Comprehensive Review and Benchmark Study
+
 > **Deep Learning for Residential Load Forecasting: A Comprehensive Review and Benchmark Study**  
 > Reza Nematirad, Anil Pahwa, and Balasubramaniam Natarajan
->
-> 
-<p align="center">
-  <img src="figures/time_series_forecasting_models last-1.png" widthitory accompanies the paper:
-
-
 
 ---
 
-<br>
+This repository provides a unified benchmarking framework for residential load forecasting using state-of-the-art deep learning models, including:
 
-This repository provides a unified benchmarking framework for deep learning-based residential load forecasting, including:
-
-- 23 forecasting models
-- 4 residential electricity datasets
+- Conventional forecasting models and Large Language Models (LLMs)
+- Four residential electricity datasets
 - Multiple forecasting horizons
 - Multiple input sequence lengths
-- Accuracy benchmarking (MAE and RMSE)
+- Accuracy benchmarking using MAE and RMSE
 - Computational efficiency evaluation
-  - Training time
-  - GPU memory usage
-  - Inference latency
 
-### Benchmark Models
+Since LLM-based approaches require additional dependencies and computational resources, they are separated from conventional models so users can install only the packages required for their experiments.
 
-The evaluated models are grouped into six architectural families.
+- **Conventional Models (`Conventional_Models/`)**
+  - Recurrent Neural Networks (RNNs)
+  - CNN / TCN Models
+  - Transformer Models
+  - MLP / Linear Models
+  - State Space Models (SSMs)
 
-#### Recurrent Neural Networks (RNNs)
-
-- RNN
-- LSTM
-- GRU
-- BiLSTM
-- ResLSTM
-
-#### CNN / TCN Models
-
-- TimesNet
-- ModernTCN
-- Times2D
-- ConvLSTM
-
-#### Transformer Models
-
-- iTransformer
-- PatchTST
-- Informer
-- Crossformer
-
-#### MLP / Linear Models
-
-- DLinear
-- SparseTSF
-- FITS
-- TimeMixer
-- HDMixer
-
-#### State Space Models (SSMs)
-
-- TimePro
-- S-Mamba
-
-#### Large Language Models (LLMs)
-
-- TimeLLM-GPT2
-- TimeLLM-LLaMA7B
-- TEMPO
-
-</details>
-
----
+- **Large Language Models (`LLMs/`)**
+  - TimeLLM-GPT2 (GPT-2-based LLM)
+  - TimeLLM-LLaMA7B (LLaMA-7B-based LLM)
+  - TEMPO (GPT-2-based LLM with LoRA fine-tuning)
 
 <details>
 <summary><strong>How to Use This Repository</strong></summary>
