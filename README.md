@@ -4,11 +4,7 @@
 > Reza Nematirad, Anil Pahwa, and Balasubramaniam Natarajan
 
 <p align="center">
-  <img src="figures/time_series_forecasting_t-1.png
-</p>
-
-<details>
-<summary><strong>Overview</strong></summary>
+  <img src="figures/time_series_forecasting_t-1.png" width=summary><strong>Overview</strong></summary>
 
 This repository provides a unified benchmarking framework for residential load forecasting using state-of-the-art deep learning models, including:
 
@@ -34,6 +30,8 @@ Since LLM-based approaches require additional dependencies and computational res
   - TEMPO (GPT-2-based LLM with LoRA fine-tuning)
 
 </details>
+
+---
 
 <details>
 <summary><strong>How to Use This Repository</strong></summary>
@@ -119,8 +117,6 @@ LLMs/
 └── utils/
 ```
 
-</details>
-
 ### dataset/
 
 Contains all datasets used for benchmarking and user-provided datasets.
@@ -187,6 +183,7 @@ Example:
 ```bash
 sh ./scripts/timemixer/timemixer_15Minute_data.sh
 ```
+
 ### results/
 
 - `logs/` : Training and evaluation log files.
@@ -239,6 +236,9 @@ We sincerely appreciate the following open-source projects for providing valuabl
 - https://github.com/VEWOXIC/FITS
 - https://github.com/lss-1138/SparseTSF
 - https://github.com/kwuking/TimeMixer
-- [Time-Series-Library](https://github.com/thuml/Time-Series-r](https://github.com/thuml/iTransformerauthors and contributors of these repositories for making their implementations publicly available and supporting reproducible research in time-series forecasting.
+- https://github.com/thuml/Time-Series-Library
+- https://github.com/thuml/iTransformer
+
+We thank the authors and contributors of these repositories for making their implementations publicly available and supporting reproducible research in time-series forecasting.
 
 </details>
