@@ -31,13 +31,13 @@ Since LLM-based approaches require additional dependencies and computational res
 <details>
 <summary><strong>How to Use This Repository</strong></summary>
 
-<br>
-
 ### 1. Clone the Repository
 
+For conventional models (non-LLMs):
+
 ```bash
-git clone https://github.com/Tims2D/Residential-Load-Forecasting-Benchmark.git
-cd Residential-Load-Forecasting-Benchmark
+git clone https://github.com/your-repo.git
+cd Conventional_Models
 ```
 
 ### 2. Install Dependencies
@@ -52,20 +52,9 @@ Place your dataset inside the `dataset/` directory.
 
 #### Dataset Requirements
 
-- Dataset should be in CSV format.
+- Dataset must be in CSV format.
 - The target variable must be the last column.
 - All preceding columns are treated as input features.
-- Missing values should be handled before training.
-
-Example:
-
-```csv
-timestamp,temp,humidity,wind_speed,load
-2024-01-01 00:00,22.1,45,5.2,1.83
-2024-01-01 00:15,21.8,47,4.8,1.79
-```
-
-Here, `load` is the forecasting target.
 
 ### 4. Run a Model
 
@@ -84,7 +73,27 @@ You can run other models using their corresponding scripts.
 <details>
 <summary><strong>Repository Structure</strong></summary>
 
-<br>
+```text
+Conventional_Models/
+├── data_provider/
+├── dataset/
+├── exp/
+├── layers/
+├── models/
+├── scripts/
+└── utils/
+
+LLMs/
+├── data_provider/
+├── dataset/
+├── exp/
+├── layers/
+├── models/
+├── scripts/
+└── utils/
+```
+
+</details>
 
 ### dataset/
 
