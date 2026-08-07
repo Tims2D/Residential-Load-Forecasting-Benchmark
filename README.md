@@ -180,25 +180,11 @@ Example:
 ```bash
 sh ./scripts/timemixer/timemixer_15Minute_data.sh
 ```
-
 ### results/
 
-Stores benchmark outputs, figures, and generated results.
-
-```text
-results/
-├── accuracy/
-├── efficiency/
-└── figures/
-```
-
-### Adding a New Model
-
-1. Add the model implementation to `models/`.
-2. Add custom layers to `layers/` if required.
-3. Register the model in the experiment framework.
-4. Create a script under `scripts/`.
-5. Run the script for training and evaluation.
+- `logs/` : Training and evaluation log files.
+- `results/` : Saved forecasting outputs, including ground-truth and predicted values.
+- `test_results/` : Visualization results generated during testing, such as forecast plots and comparison figures.
 
 </details>
 
@@ -206,10 +192,6 @@ results/
 
 <details>
 <summary><strong>Contribution</strong></summary>
-
-<br>
-
-## Contributions
 
 We welcome contributions that improve this repository, including:
 
@@ -222,24 +204,34 @@ We welcome contributions that improve this repository, including:
 
 Please ensure that all contributions follow the existing repository structure, coding style, and documentation guidelines.
 
-## Contact
+</details>
+
+---
+
+<details>
+<summary><strong>Contact</strong></summary>
 
 For questions, suggestions, or collaboration opportunities, please contact:
 
-[Reza Nemati Rad](mailto:rezanematirad@gmail.com)
+**Reza Nematirad**  
+📧 rezanematirad@gmail.com
 
-## Acknowledgments
+</details>
 
-We sincerely appreciate the following open-source projects for providing valuable codebases, implementations, and datasets that have contributed to this work:
+---
 
-- [DLinear](https://github.com/vivva/DLinear)
-- [Informer](https://github.com/zhouhaoyi/Informer2020)
-- [ModernTCN](https://github.com/luodhhh/ModernTCN)
-- [PatchTST](https://github.com/yuqinie98/PatchTST)
-- [FITS](https://github.com/VEWOXIC/FITS)
-- [SparseTSF](https://github.com/lss-1138/SparseTSF)
-- [TimeMixer](https://github.com/kwuking/TimeMixer)
-- [Time-Series-Library](https://github.com/thuml/Time-Series-Library)
-- [iTransformer](https://github.com/thuml/iTransformer)
+<details>
+<summary><strong>Acknowledgments</strong></summary>
 
-We thank the authors and contributors of these repositories for making their implementations publicly available and supporting reproducible research in time-series forecasting.
+We sincerely appreciate the following open-source projects for providing valuable codebases, implementations, and datasets that contributed to this work:
+
+- https://github.com/vivva/DLinear
+- https://github.com/zhouhaoyi/Informer2020
+- https://github.com/luodhhh/ModernTCN
+- https://github.com/yuqinie98/PatchTST
+- https://github.com/VEWOXIC/FITS
+- https://github.com/lss-1138/SparseTSF
+- https://github.com/kwuking/TimeMixer
+- [Time-Series-Library](https://github.com/thuml/Time-Series-r](https://github.com/thuml/iTransformerauthors and contributors of these repositories for making their implementations publicly available and supporting reproducible research in time-series forecasting.
+
+</details>
