@@ -3,6 +3,10 @@
 > **Deep Learning for Residential Load Forecasting: A Comprehensive Review and Benchmark Study**  
 > Reza Nematirad, Anil Pahwa, and Balasubramaniam Natarajan
 
+<p align="center">
+<img src="figures/time_series_forecasting_models last-1.png
+" width="
+  
 <details>
 <summary><strong>Overview</strong></summary>
 
