@@ -31,19 +31,38 @@ Since LLM-based approaches require additional dependencies and computational res
 <details>
 <summary><strong>How to Use This Repository</strong></summary>
 
+### Prerequisites
+
+All experiments were developed and tested using **Python 3.10**.
+
 ### 1. Clone the Repository
 
 For conventional models (non-LLMs):
 
 ```bash
-git clone https://github.com/your-repo.git
-cd Conventional_Models
+git clone https://github.com/Tims2D/Residential-Load-Forecasting-Benchmark.git
+cd Residential-Load-Forecasting-Benchmark/Conventional_Models
+```
+
+For LLM-based models:
+
+```bash
+git clone https://github.com/Tims2D/Residential-Load-Forecasting-Benchmark.git
+cd Residential-Load-Forecasting-Benchmark/LLMs
 ```
 
 ### 2. Install Dependencies
 
+For conventional models (non-LLMs):
+
 ```bash
 pip install -r requirements.txt
+```
+
+For LLM-based models:
+
+```bash
+pip install -r requirements_llm.txt
 ```
 
 ### 3. Prepare Your Dataset
