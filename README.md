@@ -4,7 +4,7 @@
 > Reza Nematirad, Anil Pahwa, and Balasubramaniam Natarajan
 
 <p align="center">
-  <imgres/time_series_forecasting_models_last.svg
+  figures/time_series_forecasting_models_last.svg
 </p>
 
 <details>
@@ -42,6 +42,10 @@ Since LLM-based approaches require additional dependencies and computational res
 </details>
 
 </details>
+
+---
+
+<details>
 <summary><strong>How to Use This Repository</strong></summary>
 
 ### Prerequisites
@@ -131,11 +135,11 @@ Contains benchmark datasets and user-provided datasets.
 
 ### `data_provider/`
 
-Handles data loading and preprocessing:
+Contains the data handling and preprocessing pipeline:
 
 - Dataset loading
 - Train/validation/test splitting
-- Data normalization and scaling
+- Data normalization
 - Forecast window generation
 - PyTorch dataloader creation
 - Temporal feature processing
@@ -150,7 +154,8 @@ Contains experiment pipelines:
 - Testing
 - Checkpoint management
 - Evaluation metrics
-- Computational efficiency measurements
+- Forecast generation
+- Computational efficiency evaluation
 
 ### `models/`
 
@@ -158,7 +163,7 @@ Contains implementations of all forecasting models used in the benchmark.
 
 ### `layers/`
 
-Contains reusable neural network components:
+Contains reusable neural network building blocks:
 
 - Attention layers
 - Embedding layers
@@ -190,8 +195,8 @@ sh ./scripts/timemixer/timemixer_15Minute_data.sh
 ### `results/`
 
 - `logs/` : Training and evaluation log files.
-- `results/` : Forecast outputs, including ground-truth and predicted values.
-- `test_results/` : Visualization files generated during testing.
+- `results/` : Saved forecasting outputs, including ground-truth and predicted values.
+- `test_results/` : Visualization results generated during testing, such as forecast plots and comparison figures.
 
 </details>
 
